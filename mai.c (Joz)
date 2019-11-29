@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "Funciones.h"
+
+int main() {
+
+    int i, cont1;
+    polinomio p;
+    monomio a[10];
+    monomio *c;
+  
+    printf("¿Cuantos monomios quieres ingresar en el primer polinomio?\n");
+    scanf("%d", &cont1);
+   
+    for(i=1;i<=cont1;i++){
+        c = &a[i];
+        printf("Inserta el coeficiente y la potencia del monomio %d separados de un espacio\n", i);
+        scanf("%d %d", &c->coef, &c->pot); //Lee el monomio
+      
+        void agregar_monomio(polinomio *p, monomio a); //Al agregar esta funcion, esta contiene dentro crear_monomio y crear_polinomio, 
+                                                         por lo que no es necesario ponerlas por separado
+       
+    }
+    for(i=cont1; i>=1; i--){ // Escribe el polinomio ingresado
+        c = &a[i];
+        printf("monomio %d es :%d %d\n", i, c->coef, c->pot);
+    }
+    void borrar_monomio(monomio *a);    
+    void borrar_polinomio(polinomio *p);
+    return 0;
+}
